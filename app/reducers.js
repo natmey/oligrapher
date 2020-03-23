@@ -147,7 +147,7 @@ export default produce( (draft, action) => {
     let id = action.id || FloatingMenu.getId(draft, 'caption')
 
     if (id) {
-      delete draft.graph.captions[action.id]
+      delete draft.graph.captions[id]
       FloatingMenu.clear(draft)
     }
 
